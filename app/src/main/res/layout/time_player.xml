@@ -29,7 +29,7 @@
     android:id="@+id/time_travel_icon"
     android:layout_width="34dip"
     android:layout_height="wrap_content"
-    android:src="@drawable/time_travel_small_icon"
+    stardroid:srcCompat="@drawable/time_travel_small_icon"
     android:paddingTop="10dip"/>
 
   <TextView
@@ -59,7 +59,7 @@
     android:clickable="true"
     android:layout_width="32dip"
     android:layout_height="wrap_content"
-    android:src="@drawable/time_travel_close"
+    stardroid:srcCompat="@drawable/time_travel_close"
     android:layout_alignParentRight="true"
     />
   </RelativeLayout>
@@ -81,7 +81,7 @@
     android:clickable="true"
     android:layout_width="32dip"
     android:layout_height="32dip"
-    android:src="@drawable/timetravel_back_btn"
+    stardroid:srcCompat="@drawable/timetravel_back_btn"
     android:layout_marginLeft="5dip"
     android:layout_marginRight="18dip"
     android:layout_marginBottom="3dip"
@@ -93,7 +93,7 @@
     android:clickable="true"
     android:layout_width="32dip"
     android:layout_height="32dip"
-    android:src="@drawable/timetravel_stop_btn"
+    stardroid:srcCompat="@drawable/timetravel_stop_btn"
     android:layout_marginRight="18dip"
     android:layout_marginBottom="1dip"
     />
@@ -104,7 +104,7 @@
     android:clickable="true"
     android:layout_width="32dip"
     android:layout_height="32dip"
-    android:src="@drawable/timetravel_fwd_btn"
+    stardroid:srcCompat="@drawable/timetravel_fwd_btn"
     android:layout_marginRight="1dip"
     android:layout_marginBottom="3dip"
     />

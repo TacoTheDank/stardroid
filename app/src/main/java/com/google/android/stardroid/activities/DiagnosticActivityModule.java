@@ -1,8 +1,9 @@
 package com.google.android.stardroid.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.stardroid.inject.PerActivity;
 
@@ -22,7 +23,7 @@ public class DiagnosticActivityModule {
 
   @Provides
   @PerActivity
-  Activity provideActivity() {
+  AppCompatActivity provideActivity() {
     return activity;
   }
 

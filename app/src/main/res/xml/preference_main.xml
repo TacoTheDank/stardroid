@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="location_prefs"
+        android:title="@string/location_prefs" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="sound_effects"
+        android:title="@string/use_sound_effects" />
+
+    <!-- Keep in sync with value in utils.Analytics -->
+    <CheckBoxPreference
+        android:defaultValue="@string/analytics_enabled"
+        android:key="enable_analytics"
+        android:summary="@string/enable_analytics_desc"
+        android:title="@string/enable_analytics" />
+
+    <Preference
+        android:key="sensor_prefs"
+        android:title="@string/sensor_prefs" />
+
+</PreferenceScreen>

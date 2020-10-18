@@ -1,9 +1,10 @@
 package com.google.android.stardroid.activities.util;
 
-import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.SharedPreferences;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.stardroid.activities.dialogs.LocationPermissionRationaleFragment;
 import com.google.android.stardroid.control.LocationController;
@@ -16,7 +17,7 @@ import javax.inject.Inject;
 public class GooglePlayServicesChecker extends AbstractGooglePlayServicesChecker {
 
   @Inject
-  GooglePlayServicesChecker(Activity parent, SharedPreferences preferences,
+  GooglePlayServicesChecker(AppCompatActivity parent, SharedPreferences preferences,
                             LocationPermissionRationaleFragment rationaleDialog,
                             FragmentManager fragmentManager) {
     super(parent, preferences, rationaleDialog, fragmentManager);

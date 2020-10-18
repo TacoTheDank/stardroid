@@ -1,9 +1,7 @@
 package com.google.android.stardroid.activities.dialogs;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,6 +9,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.stardroid.ApplicationConstants;
 import com.google.android.stardroid.R;
@@ -25,7 +26,8 @@ import javax.inject.Inject;
  */
 public class NoSensorsDialogFragment extends DialogFragment {
   private static final String TAG = MiscUtil.getTag(NoSensorsDialogFragment.class);
-  @Inject Activity parentActivity;
+  @Inject
+  AppCompatActivity parentActivity;
   @Inject SharedPreferences preferences;
 
   public interface ActivityComponent {

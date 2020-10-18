@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:theme="@android:style/Theme.Black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeBlack"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:scaleType="centerCrop"
-    android:src="@drawable/stardroid_big_image"
+    app:srcCompat="@drawable/stardroid_big_image"
     android:id="@+id/splash"
 />

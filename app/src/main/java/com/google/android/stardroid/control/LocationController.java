@@ -14,8 +14,6 @@
 
 package com.google.android.stardroid.control;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -33,6 +31,8 @@ import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog.Builder;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.stardroid.R;

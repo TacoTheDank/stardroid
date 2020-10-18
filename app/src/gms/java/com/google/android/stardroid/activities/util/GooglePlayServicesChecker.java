@@ -1,10 +1,11 @@
 package com.google.android.stardroid.activities.util;
 
-import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -22,7 +23,7 @@ public class GooglePlayServicesChecker extends AbstractGooglePlayServicesChecker
   private final GoogleApiAvailability apiAvailability;
 
   @Inject
-  GooglePlayServicesChecker(Activity parent, SharedPreferences preferences,
+  GooglePlayServicesChecker(AppCompatActivity parent, SharedPreferences preferences,
                             GoogleApiAvailability apiAvailability,
                             LocationPermissionRationaleFragment rationaleDialog,
                             FragmentManager fragmentManager) {

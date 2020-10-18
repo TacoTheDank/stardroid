@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="disable_gyro"
+        android:summary="@string/disable_gyro_preference_summary"
+        android:title="@string/disable_gyro_preference_title"
+        app:iconSpaceReserved="false" />
+
+    <ListPreference
+        android:defaultValue="STANDARD"
+        android:entries="@array/sensor_speed"
+        android:entryValues="@array/sensor_speed_values"
+        android:key="sensor_speed"
+        android:title="@string/sensor_speed"
+        app:iconSpaceReserved="false" />
+
+    <ListPreference
+        android:defaultValue="EXTRA HIGH"
+        android:entries="@array/sensor_damping"
+        android:entryValues="@array/sensor_damping_values"
+        android:key="sensor_damping"
+        android:title="@string/sensor_damping"
+        app:iconSpaceReserved="false" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="reverse_magnetic_z"
+        android:summary="@string/sensor_reverse_preference_summary"
+        android:title="@string/sensor_reverse_preference_title"
+        app:iconSpaceReserved="false" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="rotate_horizon"
+        android:summary="@string/rotate_horizon_preference_summary"
+        android:title="@string/rotate_horizon_preference_title"
+        app:iconSpaceReserved="false" />
+
+</PreferenceScreen>

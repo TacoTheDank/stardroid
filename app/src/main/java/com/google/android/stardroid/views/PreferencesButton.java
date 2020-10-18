@@ -23,8 +23,8 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.stardroid.R;
@@ -32,8 +32,8 @@ import com.google.android.stardroid.util.Analytics;
 import com.google.android.stardroid.util.AnalyticsInterface;
 import com.google.android.stardroid.util.MiscUtil;
 
-public class PreferencesButton extends ImageButton
-    implements android.view.View.OnClickListener, OnSharedPreferenceChangeListener {
+public class PreferencesButton extends AppCompatImageButton
+    implements View.OnClickListener, OnSharedPreferenceChangeListener {
   private static final String TAG = MiscUtil.getTag(PreferencesButton.class);
   private static AnalyticsInterface analytics;
   private OnClickListener secondaryOnClickListener;

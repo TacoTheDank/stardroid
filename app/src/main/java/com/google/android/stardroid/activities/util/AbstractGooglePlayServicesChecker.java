@@ -1,12 +1,13 @@
 package com.google.android.stardroid.activities.util;
 
 import android.Manifest;
-import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import androidx.core.app.ActivityCompat;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.stardroid.activities.DynamicStarMapActivity;
 import com.google.android.stardroid.activities.dialogs.LocationPermissionRationaleFragment;
@@ -17,14 +18,14 @@ import com.google.android.stardroid.util.MiscUtil;
  */
 public abstract class AbstractGooglePlayServicesChecker implements LocationPermissionRationaleFragment.Callback {
   protected static final String TAG = MiscUtil.getTag(GooglePlayServicesChecker.class);
-  protected final Activity parent;
+  protected final AppCompatActivity parent;
   protected final SharedPreferences preferences;
   private final LocationPermissionRationaleFragment rationaleDialog;
   private final FragmentManager fragmentManager;
 
-  AbstractGooglePlayServicesChecker(Activity parent, SharedPreferences preferences,
-                            LocationPermissionRationaleFragment rationaleDialog,
-                            FragmentManager fragmentManager) {
+  AbstractGooglePlayServicesChecker(AppCompatActivity parent, SharedPreferences preferences,
+                                    LocationPermissionRationaleFragment rationaleDialog,
+                                    FragmentManager fragmentManager) {
     this.parent = parent;
     this.preferences = preferences;
     this.rationaleDialog = rationaleDialog;

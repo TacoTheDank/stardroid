@@ -14,7 +14,6 @@
 
 package com.google.android.stardroid.activities;
 
-import android.app.FragmentManager;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -42,6 +41,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.stardroid.ApplicationConstants;
 import com.google.android.stardroid.R;
@@ -77,7 +77,6 @@ import com.google.android.stardroid.util.MathUtil;
 import com.google.android.stardroid.util.MiscUtil;
 import com.google.android.stardroid.util.SensorAccuracyMonitor;
 import com.google.android.stardroid.views.ButtonLayerView;
-import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -174,7 +173,8 @@ public class DynamicStarMapActivity extends InjectableActivity
   @Inject Handler handler;
   @Inject Analytics analytics;
   @Inject GooglePlayServicesChecker playServicesChecker;
-  @Inject FragmentManager fragmentManager;
+  @Inject
+  FragmentManager fragmentManager;
   @Inject EulaDialogFragment eulaDialogFragmentNoButtons;
   @Inject TimeTravelDialogFragment timeTravelDialogFragment;
   @Inject HelpDialogFragment helpDialogFragment;
@@ -840,6 +840,7 @@ public class DynamicStarMapActivity extends InjectableActivity
 
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
     if (requestCode == GOOGLE_PLAY_SERVICES_REQUEST_CODE) {
       playServicesChecker.runAfterDialog();
       return;

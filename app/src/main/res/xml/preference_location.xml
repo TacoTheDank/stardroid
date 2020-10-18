@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="force_gps"
+        android:summary="@string/force_gps_pref_hint"
+        android:title="@string/force_gps_pref" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="no_auto_locate"
+        android:summary="@string/no_use_gps_pref_hint"
+        android:title="@string/no_use_gps_pref" />
+
+    <!-- Set the default location to Galileo's birthplace -->
+    <EditTextPreference
+        android:defaultValue=""
+        android:dependency="no_auto_locate"
+        android:key="location"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:summary="@string/location_placename_hint"
+        android:title="@string/location_placename" />
+
+    <EditTextPreference
+        android:defaultValue="0"
+        android:dependency="no_auto_locate"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:key="latitude"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:summary="@string/degrees"
+        android:title="@string/location_lat_pref" />
+
+    <EditTextPreference
+        android:defaultValue="0"
+        android:dependency="no_auto_locate"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:key="longitude"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:summary="@string/degrees"
+        android:title="@string/location_long_pref" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="use_magnetic_correction"
+        android:title="@string/use_magnetic_correction" />
+</PreferenceScreen>

@@ -1,12 +1,13 @@
 package com.google.android.stardroid.activities.dialogs;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import com.google.android.stardroid.R;
 import com.google.android.stardroid.inject.HasComponent;
@@ -20,7 +21,8 @@ import javax.inject.Inject;
  */
 public class NoSearchResultsDialogFragment extends DialogFragment {
   private static final String TAG = MiscUtil.getTag(NoSearchResultsDialogFragment.class);
-  @Inject Activity parentActivity;
+  @Inject
+  AppCompatActivity parentActivity;
 
   public interface ActivityComponent {
     void inject(NoSearchResultsDialogFragment fragment);

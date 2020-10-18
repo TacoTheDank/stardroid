@@ -1,7 +1,5 @@
 package com.google.android.stardroid.activities.dialogs;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -10,6 +8,9 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.stardroid.R;
 import com.google.android.stardroid.StardroidApplication;
@@ -23,7 +24,8 @@ import javax.inject.Inject;
  */
 public class WhatsNewDialogFragment extends DialogFragment {
   private static final String TAG = MiscUtil.getTag(WhatsNewDialogFragment.class);
-  @Inject Activity parentActivity;
+  @Inject
+  AppCompatActivity parentActivity;
   private CloseListener closeListener;
 
   public interface CloseListener {

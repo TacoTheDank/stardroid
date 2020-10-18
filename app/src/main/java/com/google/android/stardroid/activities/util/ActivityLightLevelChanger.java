@@ -14,10 +14,11 @@
 
 package com.google.android.stardroid.activities.util;
 
-import android.app.Activity;
-import androidx.annotation.Nullable;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Controls the brightness level of an activity.
@@ -44,7 +45,7 @@ public class ActivityLightLevelChanger {
   private static final float BRIGHTNESS_DIM = (float) 20f / 255f;
 
   private NightModeable nightModeable;
-  private Activity activity;
+  private AppCompatActivity activity;
 
   /**
    * Wraps an activity with a setNightMode method.
@@ -52,7 +53,7 @@ public class ActivityLightLevelChanger {
    * @param activity the activity under control
    * @param nightmodeable Allows an activity to have a custom night mode method.  May be null.
    */
-  public ActivityLightLevelChanger(Activity activity, @Nullable NightModeable nightmodeable) {
+  public ActivityLightLevelChanger(AppCompatActivity activity, @Nullable NightModeable nightmodeable) {
     this.activity = activity;
     this.nightModeable = nightmodeable;
   }

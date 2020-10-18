@@ -84,7 +84,7 @@ public class StardroidApplication extends Application {
 
     // This populates the default values from the preferences XML file. See
     // {@link DefaultValues} for more details.
-    PreferenceManager.setDefaultValues(this, R.xml.preference_screen, false);
+    PreferenceManager.setDefaultValues(this, R.xml.preference_main, false);
 
     setUpAnalytics(versionName);
 
